@@ -1,18 +1,50 @@
 <script>
+	import About from "./components/About.svelte";
+	import Text from "./components/Text.svelte";
+	import Person from "./components/Person.svelte";
 	export let name;
 	export let lastName;
+	export let age;
+	let svelteLogo = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsbE4nJzFo9qHn8wMCj8Vlr3qv9dWa2Hm0XA&usqp=CAU";
+
+	const data = {
+		name: "Javier",
+		lastName: "Cavedal",
+		age: 24
+	}
+
 </script> 
 
 <main>
-	<h1>Hello {name} {lastName}!</h1>
+	<h1>Hello {data.name} {data.lastName}!</h1>
+	<About />
+	<Text anotherText="Hola!"/>
+	<Text />
+	<Person {...data} />
+	<img src={svelteLogo} alt="Svelte">
 </main>
 
 <style>
+
+	:global(body) {
+		background-color: #f2eee2;
+		color: #0084f6;
+	}
+
+	:global(root) {
+		--theme-color: purple;
+		font-size: 22px;
+	}
+
 	main {
 		text-align: center;
 		padding: 1em;
 		max-width: 240px;
 		margin: 0 auto;
+	}
+
+	main img {
+		width:20%;
 	}
 
 	h1 {
