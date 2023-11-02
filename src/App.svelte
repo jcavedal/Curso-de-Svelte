@@ -3,6 +3,7 @@
 	import Text from "./components/Text.svelte";
 	import Person from "./components/Person.svelte";
 	import Skills from "./components/Skills.svelte";
+	import Input from "./components/Input.svelte";
 	let svelteLogo = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsbE4nJzFo9qHn8wMCj8Vlr3qv9dWa2Hm0XA&usqp=CAU";
 
 	const data = {
@@ -20,6 +21,7 @@
 	<Text />
 	<Person {...data}/>
 	<Skills/>
+	<Input/>
 	<img src={svelteLogo} alt="Svelte">
 </main>
 

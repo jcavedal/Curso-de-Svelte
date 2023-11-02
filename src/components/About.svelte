@@ -1,5 +1,5 @@
 <script>
-    //let variable = 'HOLA MUNDO';
+    import Button from "./Button.svelte";
     let count = 0;
     let styles = { darkMode: true }
 
@@ -33,6 +33,8 @@
         </p>
     {/if}
 
+    <Button text="ClickCount" {count} on:click={clickCount} />
+    <Button text="DarkMode" on:click={toggle} />
     <button on:click={clickCount}>ClickCount {count === 0 ? '' : count}</button>
     <button on:click={toggle}>DarkMode</button>
 </div>
