@@ -5,5 +5,5 @@ export let age;
 </script>
 
 <div class="Person">
-    <p>{name} {lastName} {age}</p>
+    <h2>Página de {name} {lastName} {age} años</h2>
 </div>
