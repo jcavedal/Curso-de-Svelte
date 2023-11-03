@@ -4,6 +4,7 @@
 	import Person from "./components/Person.svelte";
 	import Skills from "./components/Skills.svelte";
 	import Input from "./components/Input.svelte";
+	import ButtonCount from "./components/ButtonCount.svelte";
 	let svelteLogo = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsbE4nJzFo9qHn8wMCj8Vlr3qv9dWa2Hm0XA&usqp=CAU";
 
 	const data = {
@@ -22,6 +23,7 @@
 	<Person {...data}/>
 	<Skills/>
 	<Input/>
+	<ButtonCount/>
 	<img src={svelteLogo} alt="Svelte">
 </main>
 
